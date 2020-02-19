@@ -1,0 +1,218 @@
+body {
+    font-family:Arial, Helvetica, sans-serif;
+    resize: both;
+    font-style:normal;
+    max-width: 1000px;
+    margin-left: 25%;
+    margin-right: 15%;
+    border: 1px solid gray;
+}
+.greenBox {
+    background-color: #99cc00;
+    height: 30px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.titleBox {
+    background-color: #99cc00;
+    padding: 1px;
+}
+.brownBox {
+    background-color: #fcbf82;
+}
+h1 {
+    margin-left: 50px;
+    color: #00148d;
+}
+h2 {
+    height: 30px;
+    color: #040142;
+}
+.header{
+    color: #073154;
+    font-size:30px;
+}
+footer {
+    position: relative;
+    background-color: #99cc00;
+    color: blue;
+    text-align: center;
+    font-size: 35px;
+    padding-top:25px;
+    padding-bottom:25px;
+    font-weight: bolder;
+}
+.monthbox{
+    width: 15.5%;
+    height:20px;
+    right: 5%;
+}
+.yearbox{
+    width:22.5%;
+    height:20px;
+    right: 5%;
+}
+.countrybox{
+    width:60.5%;
+    height:20px;
+    right: 5%;
+}
+input[type="text"] {
+    height: 15px;
+    width: 90%;
+}
+.leftmargin {
+    float: left;
+    width: 30%;
+}
+.content {
+    width: 60%;
+    float: left;
+}
+.rightmargin {
+    width: 10%;
+    float: left;
+}
+.whiteText {
+    color:white;
+}
+.page:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.content_one {
+    float: left;
+    width: 35%;
+}
+.column_two {
+    float: left;
+    width: 60%;
+}
+.content_three {
+    width: 60%;
+    float: left;
+}
+.content_four {
+    width: 60%;
+    float: left;
+}
+.Visa {
+    width: 75px;
+    height: 20px;
+    border: 1px solid gray;
+    position: relative;
+    padding:15px 5px 15px 2px;
+    right: 16px;
+    top: 40px;
+}
+.VisaPosition {
+    width: 5%;
+    margin-top: 90px;
+    float: right;
+}
+.question{
+    width: 20px;
+    height: 20px;
+}
+.questionone {
+    margin-top:215%;
+    margin-left:1%;
+    float:left;
+}
+.questiontwo {
+    margin-top:195%;
+    margin-left:1%;
+    float:left;
+}
+.faxBox {
+    width: 150px; 
+    height: 17px;
+}
+.but {
+    border:none;
+    font-size: 20px;
+    background-color:white;
+ }
+.bluetext{
+    color:#0000ff;
+    font-size:1.2em;
+}
+.first_content:after {
+    content:"";
+    display: block;
+    clear: both;
+}
+.alignrose{
+    margin-left:35px;
+    height:220px;
+    width:190px;
+}
+.button_image {
+    width: 25px;
+    height: 25px;
+}
+.payment_Button {
+    float:right;
+    }
+.button_position{
+    float:right;
+}
+.invalid input{
+  border-color:red;
+}
+.invalid::after{
+  content:"!";
+  font-weight:bolder;
+  color:red;
+}
+#validAddress{
+    display: none;
+}
+#validNumber{
+    display: none;
+    color: red;
+}
+#validCode{
+    display: none;
+    color: red;
+}
+#validName{
+    display: none;
+    color: red;
+}
+#validAddress{
+    display: none;
+    color: red;
+}
+#validPlace{
+    display: none;
+    color: red;
+}
+#validRegion{
+    display: none;
+    color: red;
+}
+#validTelephone{
+    display: none;
+    color: red;
+}
+#validZip{
+    display: none;
+    color: red;
+}
+#validFax{
+    display: none;
+    color: red;
+}
+#validEmail{
+    display: none;
+    color: red;
+}
+.validStyle{
+    margin top: 100px; 
+    color: red;
+    font-size: 12px;
+    border: none;
+    padding: 0px 0px 0px 0px;
+}

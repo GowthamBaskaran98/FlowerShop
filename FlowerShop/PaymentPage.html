@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+        <link rel="stylesheet" type="text/css" href="Styles/Style.css" />
+        <script type="text/javascript" src="Scripts\Validation.js"></script>
+    </head>
+    <body>
+        <form id="form1" style="line-height: 30px;">
+            <header>
+                <h1>FLOWER SHOP ONLINE</h1>
+            </header>
+            <div class="greenBox"></div>
+            <div class="page">
+                <div class="leftmargin">
+                    <img class="alignrose" src="Images/Flower.png" />
+                </div>
+                <div class="content">
+                <div class="VisaPosition">
+                    <img class="Visa" src="Images/Visa.png" />
+                </div>
+                    <p class="header">Secure Payment Page</p>
+                    <div class="first_content">
+                        <div class="content_one">
+                            <label for="Method"><b>Select Language</b></label><br />
+                            <label for="Method">Payment Method</label><br />
+                            <label for="Description">Description</label><br />
+                            <label for="Amount">Amount</label><br />
+                        </div>
+                        <div class="column_two">
+                            <select id="Language">
+                                <option value="English">English</option>
+                                <option value="French">Tamil</option>
+                                <option value="Hindi">Hindi</option>
+                            </select>
+                            <br />
+                            <label for="Visa"><b>Visa</b></label><br />
+                            <label><b>Item ordered</b></label><br />
+                            <label><b>&euro;100.00</b></label><br />
+                        </div>
+                    </div>
+                    <div class="brownBox">
+                        <h3 class="greenBox whiteText">Card details</h3>
+                        <label>You must fill in fields marked with * </label>
+                        <br />
+                        <div class="first_content">
+                            <div class="content_one">
+                                <label>* Card Number</label>
+                                <span id="validNumberSpace" class="validStyle">&nbsp;</span><br />
+                                <label>* <u>Security code</u></label>
+                                <span id="validCodeSpace"  class="validStyle">&nbsp;</span><br />
+                                <label>* Expiry date</label><br />
+                                <label>* Cardholder's name</label>
+                                <span id="validNameSpace" class="validStyle">&nbsp;</span><br />
+                            </div>
+                            <div class="content_three">
+                                <input onchange="isValidNumber()" id="CardNumber" maxlength="16" type="text" name="CardNumber" required="required" />
+                                <span id="validNumber" class="validStyle">Enter a valid Number</span><br />
+                                <input onchange="isValidSecurityCode()" id="SecurityCode" maxlength="3" style="width: 80px;" type="password" name="Code" required="required" />
+                                <span id="validCode" class="validStyle">Enter a valid Code</span><br />
+                                <select class="monthbox" required="required" id="month">
+                                    <option value="0"> </option>
+                                    <option value="1">Jan</option>
+                                    <option value="2">Feb</option>
+                                    <option value="3">Mar</option>
+                                    <option value="4">Apr</option>
+                                    <option value="5">May</option>
+                                    <option value="6">Jun</option>
+                                    <option value="7">Jul</option>
+                                    <option value="8">Aug</option>
+                                    <option value="9">Sep</option>
+                                    <option value="10">Oct</option>
+                                    <option value="11">Nov</option>
+                                    <option value="12">Dec</option>
+                                </select>
+                                <select class="yearbox" required="required" id="year">
+                                    <option value="0"> </option>
+                                    <option value="2020">2020</option>
+                                    <option value="2021">2021</option>
+                                    <option value="2022">2022</option>
+                                    <option value="2023">2023</option>
+                                    <option value="2024">2024</option>
+                                    <option value="2025">2025</option>
+                                    <option value="2026">2026</option>
+                                    <option value="2027">2027</option>
+                                    <option value="2028">2028</option>
+                                    <option value="2029">2029</option>
+                                    <option value="2030">2030</option>
+                                </select>
+                                <br />
+                                <input onchange="isValidName()" type="text" id="Name" maxlength="30" name="CardHolderName" required="required" /> 
+                                <span id="validName" class="validStyle">Enter a valid Name</span><br />
+                               <br />
+                            </div>
+                        </div>
+                        <p class="greenBox whiteText">Cardholder details</p>
+                        <label>You must fill in fields marked with * </label>
+                        <br />
+                        <div class="first_content">
+                            <div class="content_one">
+                                <label>* Address 1</label>
+                                <span id="validAddressSpace" class="validStyle">&nbsp;</span><br />
+                                <label>  Address 2</label><br />
+                                <label>  Address 3</label><br />
+                                <label>* Town/City</label>
+                                <span id="validPlaceSpace" class="validStyle">&nbsp;</span><br />
+                                <label>  Region</label>
+                                <span id="validRegionSpace" class="validStyle">&nbsp;</span><br />
+                                <label>* Postcode/Zip code</label>
+                                <span id="validZipSpace" class="validStyle">&nbsp;</span><br />
+                                <label>  Country</label><br />
+                                <label>  Telephone</label>
+                                <span id="validTelephoneSpace" class="validStyle">&nbsp;</span><br />
+                                <label>  Fax</label>
+                                <span id="validFaxSpace" class="validStyle">&nbsp;</span><br />
+                                <label>* Email Address</label>
+                                <span id="validEmailSpace" class="validStyle">&nbsp;</span><br />
+                            </div>
+                            <div class="content_four textbox_align">
+                                <input onchange="isValidFirstAddress()" type="text" id="FirstAddress" name="FirstAddress" required="required" /> 
+                                <span id="validName"  class="validStyle">Enter a valid Address</span><br />
+                                <input type="text" id="SecondAddress" name="SecondAddress" />
+                                <input type="text" id="ThirdAddress" name="ThirdAddress" />
+                                <input onchange="isValidPlace()" type="text" id="Place" maxlength="30" name="Place" required="required" />
+                                <span id="validPlace"  class="validStyle">Enter a valid Town</span><br />
+                                <input onchange="isValidRegion()" type="text" id="Region" maxlength="30" name="Region" />
+                                <span id="validRegion"  class="validStyle">Enter a valid Region</span><br />
+                                <input onchange="isValidZipCode()" style="width: 150px; height: 17px" type="text" id="Code" maxlength="6" name="code" required="required" />
+                                <span id="validZip"  class="validStyle">Enter a valid ZipCode</span><br />
+                                <select class="countrybox" required="required" id="Country">
+                                    <option value="UnitedKingdom">United Kingdom</option>
+                                    <option value="India">India</option>
+                                    <option value="China">China</option>
+                                </select><br />
+                                <input onchange="isValidPhoneNumber()" id="PhoneNumber" style="width: 150px; height: 17px" type="text" maxlength="10" name="Telephone" />
+                                <span id="validTelephone"  class="validStyle">Enter a valid Phone Number</span><br />
+                                <input onchange="isValidFax()" id="Fax" maxlength="7" class="faxBox" type="text" name="Fax" />
+                                <span id="validFax" class="validStyle">Enter a valid Fax</span><br />
+                                <input onchange="isValidEmail()" type="text" id="Email" maxlength="30" name="Email" required="required"/>
+                                <span id="validEmail"  class="validStyle">Enter a valid Mail id</span><br />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="first_content bluetext">
+                        <div class="content_one">
+                            <img class="button_image" src="Images/StartAgain.png" />
+                            <input class="bluetext but" onclick="Restart()" formnovalidate="formnovalidate" type="button" name="restart" value="START AGAIN"/><br/>
+                            <img class="button_image but" src="Images/Cancel.png" />
+                            <input class="bluetext but" formnovalidate="formnovalidate" onclick="CancelPage()" type="button" name="cancel" value="CANCEL"/>
+                        </div>
+                        <div class="content_four">
+                            <img class="button_image button_position but" src="Images/payment.png" />
+                            <input class="button_position bluetext" formnovalidate="formnovalidate" style="border: none;" onclick="FormValidation()" type="button" name="payment" value="MAKE PAYMENT"/>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="bluetext">
+                        <label class="header bluetext">Refunds and Returns </label><br />
+                        <label>For more information visit our <a href="http://help.worldpay.com/home">Refunds and Returns Policy.</a></label>
+                    </div>
+                    <div class="first_content">
+                        <div class="content_one">
+                            <img class="image" src="Images/WorldPay.png" />
+                        </div>
+                        <div class="content_four">
+                            <label class="bluetext">For help with your payment visit <a href="http://help.worldpay.com/home">WorldPay Help.</a></label>
+                        </div>
+                    </div>
+                </div>
+                <div class="rightmargin">
+                    <img class="question questionone " src="Images/Question.png" />
+                </div>
+                <div class="rightmargin">
+                    <img class="question questiontwo" src="Images/Question.png" />
+                </div>
+            </div>
+            <div>
+                <footer>Thank you for shopping at Flowershop. Have a nice day</footer>
+            </div>
+        </form>
+    </body>
+</html>
